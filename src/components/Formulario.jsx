@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { productos } from '../data/productos.data';
 
-export default function Formulario() {
+function Formulario({ compras, setCompras }) {
   const { register, handleSubmit} = useForm();
   
   const onSubmit = (data) => {
@@ -9,7 +9,7 @@ export default function Formulario() {
     data.valor = obtenerPrecio(data.fruta);
     data.key = ramdomKey();
     data.cantidad = 1;
-    console.log(data);
+    setCompras([...compras,data]);
   };
   
   const ramdomKey = () => {
@@ -36,3 +36,5 @@ export default function Formulario() {
     </form>
   );
 }
+
+export default Formulario;

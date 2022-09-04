@@ -1,13 +1,16 @@
 import Producto from "./Producto"
-import { useState } from "react"
 
-export default function ListadoProductos() {
+function ListadoProductos( { compras, setCompras } ) {
   return (
     <div>
         {
-            <Producto></Producto>
+          compras.map((compra)=>{
+            return <Producto key={compra.key}compra={compra}></Producto>
+          })
         }
         <p>Total: $total</p>
     </div>
   )
 }
+
+export default ListadoProductos

@@ -1,15 +1,15 @@
 
-function Producto() {
-  
+function Producto( { compra } ) {
+  const { fruta,valor,cantidad } = compra;
   return (
     <div>
         <p>
-            nombre del producto
+            {fruta}
         </p>
         <p>
-            Precio: $valor
+            Precio: ${valor}
         </p>
-        <input type="number" value="" min={1}/>
+        <input type="number" value={cantidad} min={1}/>
         <button type='button'>Eliminar</button>
     </div>
   )
