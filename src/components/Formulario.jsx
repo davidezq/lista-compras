@@ -5,7 +5,6 @@ function Formulario({ compras, setCompras }) {
   const { register, handleSubmit} = useForm();
   
   const onSubmit = (data) => {
-
     data.valor = obtenerPrecio(data.fruta);
     data.key = ramdomKey();
     data.cantidad = 1;
