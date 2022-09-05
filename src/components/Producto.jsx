@@ -41,7 +41,9 @@ function Producto( { compras, setCompras, compra} ) {
         </div>
         <div className='grid-center'>
             <input type="number" value={cantidadLocal} min={1} onChange={handleCantidadLocal} style={{width:'5ch'}}/>
-            <button style={{marginLeft:'10px'}} type='button' onClick={handleEliminarProducto}>Eliminar</button>
+            <button style={{marginLeft:'10px'}} type='button' onClick={handleEliminarProducto}>
+              <img src="/trash.svg" alt="basurero" />
+            </button>
         </div>
       </div>
       <hr/>

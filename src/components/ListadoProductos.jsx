@@ -9,7 +9,7 @@ function ListadoProductos( { compras, setCompras, total } ) {
           })
         }
         
-        { !!total && (
+        { !!total && !!compras.length && (
             <p className="total">Total: ${Number.parseFloat(total).toFixed(2)}</p>
           )
         }
