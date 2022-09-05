@@ -8,7 +8,11 @@ function ListadoProductos( { compras, setCompras, total } ) {
             return <Producto key={compra.key} compras={compras} setCompras={setCompras} compra={compra} total={total}></Producto>
           })
         }
-        <p>Total: ${Number.parseFloat(total).toFixed(2)}</p>
+        
+        { !!total && (
+            <p className="total">Total: ${Number.parseFloat(total).toFixed(2)}</p>
+          )
+        }
     </div>
   )
 }

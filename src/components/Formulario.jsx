@@ -23,15 +23,18 @@ function Formulario({ compras, setCompras }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <select {...register("fruta")}>
-        {
-            productos.map(({nombre})=>{
-               return <option key={ramdomKey()} style={{'textTransform':'capitalize'}} value={nombre}>{nombre}</option>
-            })
-        }
-      </select>
-      <button type="submit">Agregar</button>
+    <form className='flex' onSubmit={handleSubmit(onSubmit)}>
+      <div className='seleccionar-producto'>
+        <label className='label'>Agregar elemento:</label>
+        <select className='select' {...register("fruta")} style={{'textTransform':'capitalize'}}>
+          {
+              productos.map(({nombre})=>{
+                return <option key={ramdomKey()} style={{'textTransform':'capitalize'}} value={nombre}>{nombre}</option>
+              })
+          }
+        </select>
+      </div>
+      <button className='agregar-producto' type="submit">Agregar</button>
     </form>
   );
 }

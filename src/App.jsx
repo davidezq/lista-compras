@@ -16,7 +16,7 @@ function App() {
     }
   },[compras])
   return (
-    <div>
+    <div className='container'>
       <Encabezado> Listado de compras </Encabezado>
       <Formulario compras={compras} setCompras={setCompras}/>
       <ListadoProductos compras={compras} setCompras={setCompras} total={total}/>

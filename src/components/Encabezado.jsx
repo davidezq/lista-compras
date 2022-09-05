@@ -1,6 +1,6 @@
 function Encabezado({children}) {
   return (
-    <h1>{children}</h1>
+    <h1 className="encabezado">{children}</h1>
   )
 }
 

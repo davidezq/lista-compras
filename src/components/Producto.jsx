@@ -29,16 +29,23 @@ function Producto( { compras, setCompras, compra} ) {
   }
 
   return (
-    <div>
-        <p>
-            {fruta}
-        </p>
-        <p>
-            Precio: ${valor}
-        </p>
-        <input type="number" value={cantidadLocal} min={1} onChange={handleCantidadLocal}/>
-        <button type='button' onClick={handleEliminarProducto}>Eliminar</button>
-    </div>
+    <>
+      <div className='producto'>
+        <div className='flex-grow'>
+            <p>
+                {fruta}
+            </p>
+            <p>
+                Precio: ${valor}
+            </p>
+        </div>
+        <div className='grid-center'>
+            <input type="number" value={cantidadLocal} min={1} onChange={handleCantidadLocal} style={{width:'5ch'}}/>
+            <button style={{marginLeft:'10px'}} type='button' onClick={handleEliminarProducto}>Eliminar</button>
+        </div>
+      </div>
+      <hr/>
+    </>
   )
 }
 

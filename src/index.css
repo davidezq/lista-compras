@@ -1,0 +1,58 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    background-color: #fefefe;
+}
+
+/*App.js*/
+.container{
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+/*Encabezado.jsx*/
+.encabezado{
+    text-align: center;
+}
+
+/*Formulario.jsx*/
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+.seleccionar-producto{
+    width: 100%;
+}
+.label{
+    display: block;
+    font-size: large;
+}
+.select{
+    width: 100%;
+    font-size: medium;
+}
+.agregar-producto{
+    display: block;
+    width: 100%;
+}
+
+/*ListadoProductos.jsx*/
+.total{
+    text-align: right;
+}
+
+/*Producto.jsx*/
+.producto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-center{
+    align-self: center;
+    justify-self: center;
+}
+.grid-column-span-2{
+    grid-column: span 2;
+}
